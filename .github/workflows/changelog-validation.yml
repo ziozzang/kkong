@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Validate changelogs
-        uses: Kong/gateway-changelog@bc389e6bcc015b3560c4d1024a3782331602a0f6
+        uses: Kong/gateway-changelog@591a18e5bad42926a0c78cb1f757a5572b9da20c
         with:
           files: changelog/unreleased/*/*.yml
