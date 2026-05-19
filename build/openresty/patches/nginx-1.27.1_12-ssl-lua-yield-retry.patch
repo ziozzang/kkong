@@ -18,6 +18,9 @@ diff --git a/bundle/nginx-1.29.2/src/event/ngx_event_openssl.c b/bundle/nginx-1.
 +#   endif
 +       )
 +    {
++        c->read->ready = 0;
++        c->write->ready = 0;
++
 +        c->read->handler = ngx_ssl_handshake_handler;
 +        c->write->handler = ngx_ssl_handshake_handler;
 +
@@ -42,6 +45,9 @@ diff --git a/bundle/nginx-1.29.2/src/event/ngx_event_openssl.c b/bundle/nginx-1.
  
 +#if OPENSSL_VERSION_NUMBER >= 0x10002000L
 +    if (sslerr == SSL_ERROR_WANT_X509_LOOKUP) {
++        c->read->ready = 0;
++        c->write->ready = 0;
++
 +        c->read->handler = ngx_ssl_handshake_handler;
 +        c->write->handler = ngx_ssl_handshake_handler;
 +
@@ -58,6 +64,9 @@ diff --git a/bundle/nginx-1.29.2/src/event/ngx_event_openssl.c b/bundle/nginx-1.
 +
 +#ifdef SSL_ERROR_PENDING_SESSION
 +    if (sslerr == SSL_ERROR_PENDING_SESSION) {
++        c->read->ready = 0;
++        c->write->ready = 0;
++
 +        c->read->handler = ngx_ssl_handshake_handler;
 +        c->write->handler = ngx_ssl_handshake_handler;
 +
@@ -75,6 +84,9 @@ diff --git a/bundle/nginx-1.29.2/src/event/ngx_event_openssl.c b/bundle/nginx-1.
 +
 +#ifdef SSL_ERROR_WANT_CLIENT_HELLO_CB
 +    if (sslerr == SSL_ERROR_WANT_CLIENT_HELLO_CB) {
++        c->read->ready = 0;
++        c->write->ready = 0;
++
 +        c->read->handler = ngx_ssl_handshake_handler;
 +        c->write->handler = ngx_ssl_handshake_handler;
 +
@@ -92,6 +104,9 @@ diff --git a/bundle/nginx-1.29.2/src/event/ngx_event_openssl.c b/bundle/nginx-1.
 +
 +#ifdef SSL_ERROR_WANT_RETRY_VERIFY
 +    if (sslerr == SSL_ERROR_WANT_RETRY_VERIFY) {
++        c->read->ready = 0;
++        c->write->ready = 0;
++
 +        c->read->handler = ngx_ssl_handshake_handler;
 +        c->write->handler = ngx_ssl_handshake_handler;
 +
