@@ -9,7 +9,7 @@ jobs:
     name: Validate changelog
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Validate changelogs
         uses: Kong/gateway-changelog@bc389e6bcc015b3560c4d1024a3782331602a0f6

@@ -23,7 +23,7 @@ jobs:
 
     steps:
     - name: Checkout Kong source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Generate cache key
       id: cache-key

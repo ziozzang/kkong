@@ -43,7 +43,7 @@ jobs:
     steps:
     - name: Checkout Pongo
       id: checkout_pongo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         token: ${{ env.GITHUB_TOKEN }}
         repository: kong/kong-pongo

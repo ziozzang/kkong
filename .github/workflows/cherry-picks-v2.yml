@@ -26,7 +26,7 @@ jobs:
         startsWith(github.event.comment.body, '/cherry-pick')
       )
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           token: ${{ secrets.CHERRY_PICK_TOKEN }}
       - name: Create backport pull requests
