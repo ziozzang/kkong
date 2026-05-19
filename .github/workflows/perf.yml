@@ -141,12 +141,12 @@ jobs:
         suites="$(printf '%s' "$COMMENT_BODY" | awk '{print $1}')"
         tags="$(printf '%s' "$COMMENT_BODY" | awk '{print $2}')"
 
-        if [[ $suite == "/flamegraph" ]]; then
+        if [[ $suites == "/flamegraph" ]]; then
           suites="02-flamegraph"
           if [[ -z $tags ]]; then
             tags="simple"
           fi
-        elif [[ $suite == "/perf" ]]; then
+        elif [[ $suites == "/perf" ]]; then
           suites="01-rps"
           if [[ -z $tags ]]; then
             tags="baseline,single_route"
@@ -308,7 +308,7 @@ jobs:
         result="${result//$'\n'/'%0A'}"
         result="${result//$'\r'/'%0D'}"
 
-        echo "result=$results" >> $GITHUB_OUTPUT
+        echo "result=$result" >> $GITHUB_OUTPUT
 
     - name: Upload charts
       if: always()
