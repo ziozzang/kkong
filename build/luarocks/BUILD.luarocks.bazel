@@ -40,8 +40,9 @@ kong_template_genrule(
     srcs = [
         "@libexpat",
         "@openssl",
+        "@cross_deps_libyaml//:libyaml",
     ] + select({
-        "@kong//:any-cross": ["@cross_deps_libyaml//:libyaml"],
+        "@kong//:any-cross": [],
         "//conditions:default": [
             "@luarocks//:luarocks_host",
             "@openresty//:luajit",

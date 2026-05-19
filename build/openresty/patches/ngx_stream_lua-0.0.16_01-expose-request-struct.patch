@@ -1,7 +1,7 @@
-diff --git a/bundle/ngx_stream_lua-0.0.16/src/api/ngx_stream_lua_api.h b/bundle/ngx_stream_lua-0.0.16/src/api/ngx_stream_lua_api.h
+diff --git a/bundle/ngx_stream_lua-0.0.18RC2/src/api/ngx_stream_lua_api.h b/bundle/ngx_stream_lua-0.0.18RC2/src/api/ngx_stream_lua_api.h
 index 515cfd3..c743dae 100644
---- a/bundle/ngx_stream_lua-0.0.16/src/api/ngx_stream_lua_api.h
-+++ b/bundle/ngx_stream_lua-0.0.16/src/api/ngx_stream_lua_api.h
+--- a/bundle/ngx_stream_lua-0.0.18RC2/src/api/ngx_stream_lua_api.h
++++ b/bundle/ngx_stream_lua-0.0.18RC2/src/api/ngx_stream_lua_api.h
 @@ -21,6 +21,9 @@
  
  

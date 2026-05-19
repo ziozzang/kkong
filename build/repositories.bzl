@@ -50,12 +50,12 @@ def github_cli_repositories():
         )
 
 def kong_github_repositories():
-    maybe(
-        github_release,
+    http_archive(
         name = "kong_admin_gui",
-        repo = "kong/kong-manager",
-        tag = KONG_VAR["KONG_MANAGER"],
-        pattern = "release.tar.gz",
+        urls = [
+            "https://github.com/Kong/kong-manager/releases/download/nightly/release.tar.gz",
+        ],
+        sha256 = "248fbb8fa4ba27d7bfc778bf40550de6b2fc5392455bf3fee85415ef4b9a09b9",
         build_file_content = _DIST_BUILD_FILE_CONTENT,
     )
 

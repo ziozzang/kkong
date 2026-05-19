@@ -1,6 +1,4 @@
 """A module defining the third party dependency OpenResty"""
-
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 load("@kong_bindings//:variables.bzl", "KONG_VAR")
 load("//build:build_system.bzl", "git_or_local_repository")
@@ -46,12 +44,8 @@ def openresty_repositories():
         openresty_http_archive_wrapper,
         name = "openresty",
         build_file = "//build/openresty:BUILD.openresty.bazel",
-        sha256 = KONG_VAR["OPENRESTY_SHA256"],
+        archive = "//vendor/openresty:openresty-1.29.2.3-nginx-1.31.0-as1292.tar.gz",
         strip_prefix = "openresty-" + openresty_version,
-        urls = [
-            "https://openresty.org/download/openresty-" + openresty_version + ".tar.gz",
-            "https://github.com/Kong/openresty-release-mirror/releases/download/" + openresty_version + "/openresty-" + openresty_version + ".tar.gz",
-        ],
         patches = KONG_VAR["OPENRESTY_PATCHES"],
         patch_args = ["-p1"],
     )
@@ -111,5 +105,38 @@ openresty_binding = repository_rule(
 )
 
 def openresty_http_archive_wrapper(name, **kwargs):
-    http_archive(name = name, **kwargs)
+    _openresty_vendor_archive(
+        name = name,
+        build_file = kwargs["build_file"],
+        archive = kwargs["archive"],
+        strip_prefix = kwargs["strip_prefix"],
+        patches = kwargs["patches"],
+        patch_args = kwargs["patch_args"],
+    )
     openresty_binding(name = name + "_binding")
+
+def _openresty_vendor_archive_impl(ctx):
+    ctx.extract(
+        ctx.path(ctx.attr.archive),
+        stripPrefix = ctx.attr.strip_prefix,
+    )
+    ctx.symlink(ctx.path(ctx.attr.build_file), "BUILD.bazel")
+
+    strip = 0
+    for arg in ctx.attr.patch_args:
+        if arg.startswith("-p"):
+            strip = int(arg[2:])
+
+    for patch in ctx.attr.patches:
+        ctx.patch(ctx.path(Label(patch)), strip)
+
+_openresty_vendor_archive = repository_rule(
+    implementation = _openresty_vendor_archive_impl,
+    attrs = {
+        "archive": attr.label(allow_single_file = True, mandatory = True),
+        "build_file": attr.label(allow_single_file = True, mandatory = True),
+        "patch_args": attr.string_list(default = []),
+        "patches": attr.string_list(default = []),
+        "strip_prefix": attr.string(mandatory = True),
+    },
+)

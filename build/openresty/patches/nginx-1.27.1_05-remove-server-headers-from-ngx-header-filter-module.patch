@@ -1,20 +1,17 @@
-diff --git a/bundle/nginx-1.27.1/src/http/ngx_http_header_filter_module.c b/bundle/nginx-1.27.1/src/http/ngx_http_header_filter_module.c
-index 90525ef..2c75594 100644
---- a/bundle/nginx-1.27.1/src/http/ngx_http_header_filter_module.c
-+++ b/bundle/nginx-1.27.1/src/http/ngx_http_header_filter_module.c
-@@ -46,11 +46,6 @@ ngx_module_t  ngx_http_header_filter_module = {
+diff --git a/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c b/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c
+--- a/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c
++++ b/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c
+@@ -47,9 +47,6 @@
  };
  
  
--static u_char ngx_http_server_string[] = "Server: openresty" CRLF;
+-static u_char ngx_http_server_string[] = "Server: nginx" CRLF;
 -static u_char ngx_http_server_full_string[] = "Server: " NGINX_VER CRLF;
 -static u_char ngx_http_server_build_string[] = "Server: " NGINX_VER_BUILD CRLF;
--
--
- static ngx_str_t ngx_http_status_lines[] = {
  
-     ngx_string("200 OK"),
-@@ -283,18 +278,6 @@ ngx_http_header_filter(ngx_http_request_t *r)
+ static ngx_str_t ngx_http_early_hints_status_line =
+     ngx_string("HTTP/1.1 103 Early Hints" CRLF);
+@@ -287,18 +284,6 @@
  
      clcf = ngx_http_get_module_loc_conf(r, ngx_http_core_module);
  
@@ -33,7 +30,7 @@ index 90525ef..2c75594 100644
      if (r->headers_out.date == NULL) {
          len += sizeof("Date: Mon, 28 Sep 1970 06:00:00 GMT" CRLF) - 1;
      }
-@@ -452,23 +435,6 @@ ngx_http_header_filter(ngx_http_request_t *r)
+@@ -456,23 +441,6 @@
      }
      *b->last++ = CR; *b->last++ = LF;
  
