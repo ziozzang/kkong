@@ -35,20 +35,26 @@
 upstream OpenResty tarball을 그대로 쓰지 않고, nginx `1.31.1` 계열이
 반영된 로컬 repacked tarball을 참조하도록 변경했다.
 
+이 repack에는 `ngx.pipe` 지원을 위해 필요한 nginx `socket_cloexec`
+코어 패치도 함께 포함했다.
+
 관련 파일:
 
 - `build/openresty/repositories.bzl`
 
 ### 3. TLS yield 회귀 패치
 
-가장 중요한 수정은 TLS certificate phase의 Lua yield/resume 회귀를 고친
-것이다.
+가장 중요한 수정은 TLS certificate phase의 Lua yield/resume 회귀와
+`ngx.pipe` 런타임 가용성을 함께 복원한 것이다.
 
 핵심 패치 파일:
 
 - `build/openresty/patches/nginx-1.27.1_12-ssl-lua-yield-retry.patch`
 
 이 패치는 nginx/OpenSSL 핸드셰이크 재시도 경로를 복원한다.
+
+추가로 repacked OpenResty에는 nginx `socket_cloexec` 코어 패치가 포함되어
+있어 upstream integration harness에서 요구하는 `ngx.pipe`가 정상 동작한다.
 
 복원 대상:
 
@@ -57,8 +63,9 @@ upstream OpenResty tarball을 그대로 쓰지 않고, nginx `1.31.1` 계열이
 - `SSL_ERROR_WANT_CLIENT_HELLO_CB`
 - `SSL_ERROR_WANT_RETRY_VERIFY`
 
-이 패치가 없으면 `ssl_certificate_by_lua` 진입 후 yield가 발생하는 경로에서
-TLS EOF 형태의 실패가 발생할 수 있다.
+이 변경들이 없으면 `ssl_certificate_by_lua` 진입 후 yield가 발생하는
+경로에서 TLS EOF 형태의 실패가 발생할 수 있고, 일부 integration spec은
+`ngx.pipe` 미지원 상태로 실행 전 중단될 수 있다.
 
 ### 4. 템플릿 충돌 방지 수정
 

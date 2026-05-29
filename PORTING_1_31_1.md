@@ -12,6 +12,8 @@ that Kong remains functional on patched upstream nginx/OpenResty combinations.
   - `file:///docker/kong/tmp/openresty-1.29.2.5-nginx-1.31.1-as1292.tar.gz`
 - Kong nginx dependency metadata was updated to `1.31.1.5`.
 - This repack picks up the nginx `1.31.1` fix for `CVE-2026-9256`.
+- The vendored OpenResty repack also restores the nginx `socket_cloexec` core
+  patch required for `ngx.pipe` support on the `1.31.1` runtime.
 - The `kong_manager` release fetch was pinned to a direct public release tarball.
 - `lua_ssl_verify_depth` injection was guarded to avoid duplicate directive
   emission.
@@ -20,20 +22,26 @@ that Kong remains functional on patched upstream nginx/OpenResty combinations.
 
 ## Critical Runtime Fix
 
-The most important fix in this tree is:
+The most important fixes in this tree are:
 
 - `build/openresty/patches/nginx-1.27.1_12-ssl-lua-yield-retry.patch`
+- vendored OpenResty repack with the nginx `socket_cloexec` core patch restored
 
-This restores nginx/OpenSSL handshake retry handling for OpenResty Lua SSL
-yield paths, specifically:
+Together they restore:
+
+- nginx/OpenSSL handshake retry handling for OpenResty Lua SSL yield paths,
+  specifically:
 
 - `SSL_ERROR_WANT_X509_LOOKUP`
 - `SSL_ERROR_PENDING_SESSION`
 - `SSL_ERROR_WANT_CLIENT_HELLO_CB`
 - `SSL_ERROR_WANT_RETRY_VERIFY`
+- `ngx.pipe` runtime availability required by the upstream integration test
+  harness
 
-Without that patch, `ssl_certificate_by_lua` could enter but fail after yield
-with TLS EOFs on the `1.31.x` runtime.
+Without these changes, `ssl_certificate_by_lua` could enter but fail after
+yield with TLS EOFs on the `1.31.x` runtime, and `ngx.pipe`-backed tests would
+abort before execution.
 
 ## Verified Behavior
 
