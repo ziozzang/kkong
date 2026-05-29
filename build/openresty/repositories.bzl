@@ -44,7 +44,7 @@ def openresty_repositories():
         openresty_http_archive_wrapper,
         name = "openresty",
         build_file = "//build/openresty:BUILD.openresty.bazel",
-        archive = "//vendor/openresty:openresty-1.29.2.3-nginx-1.31.1-as1292.tar.gz",
+        archive = "//vendor/openresty:openresty-1.29.2.5-nginx-1.31.1-as1292.tar.gz",
         strip_prefix = "openresty-" + openresty_version,
         patches = KONG_VAR["OPENRESTY_PATCHES"],
         patch_args = ["-p1"],

@@ -20,9 +20,9 @@
 
 주요 런타임 기준은 다음과 같이 바뀌었다.
 
-- OpenResty 기준: `1.27.1.2` -> `1.29.2.3`
+- OpenResty 기준: `1.27.1.2` -> `1.29.2.5`
 - nginx 코어 기준: custom porting으로 `1.31.1.x` 라인 검증
-- Kong nginx dependency metadata: `1.31.1.3`
+- Kong nginx dependency metadata: `1.31.1.5`
 
 관련 파일:
 
