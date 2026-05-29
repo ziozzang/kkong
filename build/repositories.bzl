@@ -55,7 +55,7 @@ def kong_github_repositories():
         urls = [
             "https://github.com/Kong/kong-manager/releases/download/nightly/release.tar.gz",
         ],
-        sha256 = "248fbb8fa4ba27d7bfc778bf40550de6b2fc5392455bf3fee85415ef4b9a09b9",
+        sha256 = "184544786511844a2f599f1c3ad41e1e47ac7211ec8abcd1ab60f0bcd71a9933",
         build_file_content = _DIST_BUILD_FILE_CONTENT,
     )
 

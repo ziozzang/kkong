@@ -21,8 +21,8 @@
 주요 런타임 기준은 다음과 같이 바뀌었다.
 
 - OpenResty 기준: `1.27.1.2` -> `1.29.2.3`
-- nginx 코어 기준: custom porting으로 `1.31.0.x` 라인 검증
-- Kong nginx dependency metadata: `1.31.0.3`
+- nginx 코어 기준: custom porting으로 `1.31.1.x` 라인 검증
+- Kong nginx dependency metadata: `1.31.1.3`
 
 관련 파일:
 
@@ -32,7 +32,7 @@
 
 ### 2. OpenResty 소스 오버라이드
 
-upstream OpenResty tarball을 그대로 쓰지 않고, nginx `1.31.0` 계열이
+upstream OpenResty tarball을 그대로 쓰지 않고, nginx `1.31.1` 계열이
 반영된 로컬 repacked tarball을 참조하도록 변경했다.
 
 관련 파일:
@@ -160,7 +160,7 @@ Kong nginx 템플릿 쪽에서는 `lua_ssl_verify_depth`가 중복 선언되지 
 
 영문 포팅 문서:
 
-- `PORTING_1_31_0.md`
+- `PORTING_1_31_1.md`
 
 본 한국어 변경 요약:
 
