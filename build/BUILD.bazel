@@ -272,9 +272,21 @@ kong_genrule(
         """ set -e
         rm -rf ${BUILD_DESTDIR}/share ${BUILD_DESTDIR}/lib ${BUILD_DESTDIR}/etc
         LUAROCKS=$(dirname '$(location @luarocks//:luarocks_make)')/luarocks_tree
-        cp -r ${LUAROCKS}/share ${LUAROCKS}/lib ${LUAROCKS}/etc ${BUILD_DESTDIR}/.
+        for dir in share lib etc; do
+            if [[ -d ${LUAROCKS}/${dir} ]]; then
+                cp -r ${LUAROCKS}/${dir} ${BUILD_DESTDIR}/.
+            fi
+        done
+        HOST_LUAROCKS=$(dirname '$(location @luarocks//:luarocks_make)')/luarocks_host
+        if [[ ! -d ${BUILD_DESTDIR}/etc/luarocks && -d ${HOST_LUAROCKS}/etc/luarocks ]]; then
+            mkdir -p ${BUILD_DESTDIR}/etc
+            cp -r ${HOST_LUAROCKS}/etc/luarocks ${BUILD_DESTDIR}/etc/.
+        fi
 
         TARGET_LUAROCKS=$(dirname '$(location @luarocks//:luarocks_target)')/luarocks_tree
+        if [[ ! -x ${TARGET_LUAROCKS}/bin/luarocks ]]; then
+            TARGET_LUAROCKS=${HOST_LUAROCKS}
+        fi
         cp ${TARGET_LUAROCKS}/bin/luarocks ${BUILD_DESTDIR}/bin/.
         cp ${TARGET_LUAROCKS}/bin/luarocks-admin ${BUILD_DESTDIR}/bin/.
 

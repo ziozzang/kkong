@@ -1,4 +1,4 @@
-# Kong 1.31.1 Porting Notes
+# Kong 1.31.2 Porting Notes
 
 This tree is a security-focused Kong source fork used to validate Kong on a
 custom OpenResty runtime whose embedded nginx core was moved to the `1.31.x`
@@ -7,13 +7,14 @@ that Kong remains functional on patched upstream nginx/OpenResty combinations.
 
 ## What Changed
 
-- Base OpenResty requirement moved from `1.27.1.2` to `1.29.2.5`.
+- Base OpenResty requirement moved from `1.27.1.2` to `1.31.2.1`.
 - The OpenResty source fetch path is overridden to a locally repacked tarball:
-  - `file:///docker/kong/tmp/openresty-1.29.2.5-nginx-1.31.1-as1292.tar.gz`
-- Kong nginx dependency metadata was updated to `1.31.1.5`.
-- This repack picks up the nginx `1.31.1` fix for `CVE-2026-9256`.
+  - `file:///docker/kong/tmp/openresty-1.31.2.1-nginx-1.31.2-as1312.tar.gz`
+- Kong nginx dependency metadata was updated to `1.31.2.1`.
+- This repack picks up the nginx `1.31.2` fixes for the June 2026 nginx advisories,
+  including `CVE-2026-42530`, `CVE-2026-42055`, and `CVE-2026-48142`.
 - The vendored OpenResty repack also restores the nginx `socket_cloexec` core
-  patch required for `ngx.pipe` support on the `1.31.1` runtime.
+  patch required for `ngx.pipe` support on the `1.31.2` runtime.
 - The `kong_manager` release fetch was pinned to a direct public release tarball.
 - `lua_ssl_verify_depth` injection was guarded to avoid duplicate directive
   emission.

@@ -1,11 +1,10 @@
-diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.c b/bundle/nginx-1.29.2/src/core/ngx_log.c
---- a/bundle/nginx-1.29.2/src/core/ngx_log.c
-+++ b/bundle/nginx-1.29.2/src/core/ngx_log.c
-@@ -159,8 +159,12 @@
-     debug_connection = (log->log_level & NGX_LOG_DEBUG_CONNECTION) != 0;
+diff --git a/bundle/nginx-1.31.2/src/core/ngx_log.c b/bundle/nginx-1.31.2/src/core/ngx_log.c
+--- a/bundle/nginx-1.31.2/src/core/ngx_log.c
++++ b/bundle/nginx-1.31.2/src/core/ngx_log.c
+@@ -172,7 +172,12 @@
  
      while (log) {
--
+ 
 +#if (NGX_HTTP_LUA_KONG)
 +        if (ngx_http_lua_kong_get_dynamic_log_level(log->log_level) < level &&
 +            !debug_connection) {
@@ -15,7 +14,7 @@ diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.c b/bundle/nginx-1.29.2/src/co
              break;
          }
  
-@@ -218,7 +222,11 @@
+@@ -230,7 +235,11 @@
  {
      va_list  args;
  
@@ -27,12 +26,12 @@ diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.c b/bundle/nginx-1.29.2/src/co
          va_start(args, fmt);
          ngx_log_error_core(level, log, err, fmt, args);
          va_end(args);
-diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.h b/bundle/nginx-1.29.2/src/core/ngx_log.h
---- a/bundle/nginx-1.29.2/src/core/ngx_log.h
-+++ b/bundle/nginx-1.29.2/src/core/ngx_log.h
-@@ -75,6 +75,13 @@
-     NGX_COMPAT_END
+diff --git a/bundle/nginx-1.31.2/src/core/ngx_log.h b/bundle/nginx-1.31.2/src/core/ngx_log.h
+--- a/bundle/nginx-1.31.2/src/core/ngx_log.h
++++ b/bundle/nginx-1.31.2/src/core/ngx_log.h
+@@ -76,6 +76,14 @@
  };
+ 
  
 +#if (NGX_HTTP_LUA_KONG)
 +ngx_uint_t
@@ -41,10 +40,11 @@ diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.h b/bundle/nginx-1.29.2/src/co
 +#define ngx_http_lua_kong_get_dynamic_log_level(expr) (expr)
 +#endif
 +
- 
- #define NGX_MAX_ERROR_STR   2048
- 
-@@ -86,13 +93,13 @@
++
+ #ifndef NGX_MAX_ERROR_STR
+ #define NGX_MAX_ERROR_STR   4096
+ #endif
+@@ -88,13 +96,13 @@
  #define NGX_HAVE_VARIADIC_MACROS  1
  
  #define ngx_log_error(level, log, ...)                                        \
@@ -60,7 +60,7 @@ diff --git a/bundle/nginx-1.29.2/src/core/ngx_log.h b/bundle/nginx-1.29.2/src/co
          ngx_log_error_core(NGX_LOG_DEBUG, log, __VA_ARGS__)
  
  /*********************************/
-@@ -102,13 +109,13 @@
+@@ -104,13 +112,13 @@
  #define NGX_HAVE_VARIADIC_MACROS  1
  
  #define ngx_log_error(level, log, args...)                                    \
