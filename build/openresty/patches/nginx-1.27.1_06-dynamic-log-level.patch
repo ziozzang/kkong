@@ -1,6 +1,6 @@
-diff --git a/bundle/nginx-1.31.2/src/core/ngx_log.c b/bundle/nginx-1.31.2/src/core/ngx_log.c
---- a/bundle/nginx-1.31.2/src/core/ngx_log.c
-+++ b/bundle/nginx-1.31.2/src/core/ngx_log.c
+diff --git a/bundle/nginx-1.31.3/src/core/ngx_log.c b/bundle/nginx-1.31.3/src/core/ngx_log.c
+--- a/bundle/nginx-1.31.3/src/core/ngx_log.c
++++ b/bundle/nginx-1.31.3/src/core/ngx_log.c
 @@ -172,7 +172,12 @@
  
      while (log) {
@@ -26,9 +26,9 @@ diff --git a/bundle/nginx-1.31.2/src/core/ngx_log.c b/bundle/nginx-1.31.2/src/co
          va_start(args, fmt);
          ngx_log_error_core(level, log, err, fmt, args);
          va_end(args);
-diff --git a/bundle/nginx-1.31.2/src/core/ngx_log.h b/bundle/nginx-1.31.2/src/core/ngx_log.h
---- a/bundle/nginx-1.31.2/src/core/ngx_log.h
-+++ b/bundle/nginx-1.31.2/src/core/ngx_log.h
+diff --git a/bundle/nginx-1.31.3/src/core/ngx_log.h b/bundle/nginx-1.31.3/src/core/ngx_log.h
+--- a/bundle/nginx-1.31.3/src/core/ngx_log.h
++++ b/bundle/nginx-1.31.3/src/core/ngx_log.h
 @@ -76,6 +76,14 @@
  };
  

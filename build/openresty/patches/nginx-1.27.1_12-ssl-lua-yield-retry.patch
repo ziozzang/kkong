@@ -1,5 +1,5 @@
---- a/bundle/nginx-1.31.2/src/event/ngx_event_openssl.c
-+++ b/bundle/nginx-1.31.2/src/event/ngx_event_openssl.c
+--- a/bundle/nginx-1.31.3/src/event/ngx_event_openssl.c
++++ b/bundle/nginx-1.31.3/src/event/ngx_event_openssl.c
 @@ -3351,6 +3351,37 @@
          sslerr = SSL_ERROR_SYSCALL;
      }
