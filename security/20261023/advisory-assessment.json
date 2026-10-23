@@ -1,0 +1,1614 @@
+[
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-35189",
+    "title": "Excessive Memory Allocation in Relative CRLDP Processing",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42772",
+    "title": "Potential CPU DoS via O(n^2) Fragment Reassembly in QUIC",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-54872",
+    "title": "Timing Side-Channel in Scalar Multiplication for Non-NIST EC Curves",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-54873",
+    "title": "QUIC STREAM Fragment Metadata DoS",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-54875",
+    "title": "Non-Constant-Time SM2 Scalar Multiplication on ARM64 and RISC-V",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-72897",
+    "title": "Out-of-Bounds Access After SSL_set_SSL_CTX() During a Handshake",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-75804",
+    "title": "QUIC Connection-Level Flow Control is Not Enforced for Streams",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-75805",
+    "title": "NULL Pointer Dereference in CMP Client Revocation Response Handling",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-75806",
+    "title": "Unauthenticated and Undersized DTLS 1.2 AEAD Record Causes DoS",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-77696",
+    "title": "Timing Side-Channel in SM2 Signature Generation",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-84782",
+    "title": "DTLS Retransmits Handshake Messages From a Stale Buffer Offset",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-84784",
+    "title": "QUIC: Unbounded RETIRE_CONNECTION_ID Backlog",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-75803",
+    "title": "AEAD Forgeries with Empty Ciphertext When Using EVP_Cipher()",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-14457",
+    "title": "RPK Server Signature Algorithm Selection Can Dereference a Missing Certificate",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-54874",
+    "title": "Excessive Memory Use Buffering DTLS Records for a Future Epoch",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-63072",
+    "title": "Heap Buffer Overflow in CMS Key Unwrapping",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-63073",
+    "title": "Untrusted Sender DN Used as Format String in CMP Response Validation",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-63074",
+    "title": "CMP Indefinite Cache Growth of ExtraCerts",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-63075",
+    "title": "QUIC ACK-only Packet Retention Can Cause Memory Exhaustion",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-63076",
+    "title": "Invalid Pointer Dereference in CMP Server via Crafted protectionAlg",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-34180",
+    "title": "Heap Buffer Over-read in ASN.1 Content Parsing",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-34181",
+    "title": "PKCS#12 Files with PBMAC1 Are Accepted with Short HMAC Keys",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-34182",
+    "title": "CMS AuthEnvelopedData Processing May Accept Forged Messages",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-34183",
+    "title": "Unbounded Memory Growth in the QUIC PATH_CHALLENGE Handler",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "라이브러리 영향; 이 이미지의 일반 Kong TCP/TLS 경로는 해당 프로토콜을 사용하지 않음. 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42766",
+    "title": "Possible NULL Dereference in Password-Based CMS Decryption",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42767",
+    "title": "NULL Pointer Dereference in CRMF EncryptedValue Decryption",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42768",
+    "title": "Multi-RecipientInfo Bleichenbacher Oracle in CMS_decrypt() and PKCS7_decrypt()",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42769",
+    "title": "Trust-Anchor Substitution via cert/issuer Typo in CMP rootCaKeyUpdate",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-42770",
+    "title": "FFC-DH Peer Validation Uses Attacker-Supplied q",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-45445",
+    "title": "AES-OCB IV Ignored on EVP_Cipher() Path",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-45446",
+    "title": "Incorrect Tag Processing for Empty Messages in AES-GCM-SIV and AES-SIV modes",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-45447",
+    "title": "Heap Use-After-Free in the PKCS7_verify() Function",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-7383",
+    "title": "Possible Heap Buffer Overflow in ASN.1 Multibyte String Conversion",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-9076",
+    "title": "Out-of-Bounds Read in CMS Password-Based Decryption",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-28387",
+    "title": "Potential Use-after-free in DANE Client Code",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-28388",
+    "title": "NULL Pointer Dereference When Processing a Delta CRL",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-28389",
+    "title": "Possible NULL Dereference When Processing CMS KeyAgreeRecipientInfo",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-28390",
+    "title": "Possible NULL Dereference When Processing CMS KeyTransportRecipientInfo",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-31789",
+    "title": "Heap Buffer Overflow in Hexadecimal Conversion",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-31790",
+    "title": "Incorrect Failure Handling in RSA KEM RSASVE Encapsulation",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-11187",
+    "title": "Improper validation of PBMAC1 parameters in PKCS#12 MAC verification",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-15467",
+    "title": "Stack buffer overflow in CMS (Auth)EnvelopedData parsing",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-15468",
+    "title": "NULL dereference in SSL_CIPHER_find() function on unknown cipher ID",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-66199",
+    "title": "TLS 1.3 CompressedCertificate excessive memory allocation",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-68160",
+    "title": "Heap out-of-bounds write in BIO_f_linebuffer on short writes",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-69418",
+    "title": "Unauthenticated/unencrypted trailing bytes with low-level OCB function calls",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-69419",
+    "title": "Out of bounds write in PKCS12_get_friendlyname() UTF-8 conversion",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-69420",
+    "title": "Missing ASN1_TYPE validation in TS_RESP_verify_response() function",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-69421",
+    "title": "NULL Pointer Dereference in PKCS12_item_decrypt_d2i_ex function",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-22795",
+    "title": "Missing ASN1_TYPE validation in PKCS#12 parsing",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2026-22796",
+    "title": "ASN1_TYPE Type Confusion in the PKCS7_digest_from_attributes() function",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "기능·입력 조건에 따라 영향. 플러그인의 FFI 호출 가능성을 배제하지 않고 함께 갱신",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-9230",
+    "title": "Out-of-bounds read & write in RFC 3211 KEK Unwrap",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-9231",
+    "title": "Timing side-channel in SM2 algorithm on 64 bit ARM",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "OpenSSL",
+    "id": "CVE-2025-9232",
+    "title": "Out-of-bounds read in HTTP client no_proxy handling",
+    "before": "3.4.1",
+    "after": "3.5.9",
+    "assessment": "영향 판에 포함. TLS/인증서/암호 기능 사용 조건에 따라 노출",
+    "source": "https://openssl-library.org/news/vulnerabilities/"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-103111",
+    "title": "PCRE2: out-of-bounds write in JIT matching with large stack allocations",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-r9hj-j2rw-4q3m"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-89156",
+    "title": "PCRE2: out-of-bounds read in pcre2_match() after JIT fallback with invalid UTF",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-2p8c-ff85-vh9x"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-86145",
+    "title": "PCRE2: out-of-bounds write in pcre2_dfa_match() with recursive patterns under a low heap limit",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-3r4p-g7gg-ppmf"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-89157",
+    "title": "PCRE2: out-of-bounds write in pcre2_pattern_convert() with large patterns on 32-bit systems",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-q8g2-wprr-34m9"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-89160",
+    "title": "PCRE2: out-of-bounds reads in pcre2_match() when matching invalid UTF subjects with PCRE2_MATCH_INVALID_UTF",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-9qww-pwc4-77qq"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2026-89158",
+    "title": "PCRE2: integer overflow in pcre2_compile_32() causes out-of-bounds write on 32-bit systems",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-fmgr-6ggq-9859"
+  },
+  {
+    "component": "PCRE2",
+    "id": "GHSA-q7rw-r7qq-2hx6",
+    "title": "PCRE2: uninitialized memory disclosure in pcre2_serialize_encode()",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-q7rw-r7qq-2hx6"
+  },
+  {
+    "component": "PCRE2",
+    "id": "GHSA-43gg-c3xx-7w7g",
+    "title": "PCRE2: out-of-bounds read in JIT-compiled pcre2_match() on AArch64",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-43gg-c3xx-7w7g"
+  },
+  {
+    "component": "PCRE2",
+    "id": "CVE-2025-58050",
+    "title": "PCRE2: out-of-bounds read in pcre2_match() with (scs:) and (ACCEPT)",
+    "before": "10.45",
+    "after": "10.49",
+    "assessment": "버전 영향 범위 및 8-bit/JIT 사용 조건 대조. 32-bit 전용·직렬화 전용 경로도 패치된 동일 배포판으로 갱신",
+    "source": "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-c2gv-xgf5-5cc2"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-15176",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "alias/rewrite 조합에서 조건부 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-93479",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "원본 1.31.0은 도입 범위 밖. 업그레이드 시 중간 취약판을 건너뛰어 수정된 1.31.8 사용",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-95101",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "HTTP/3 미컴파일로 실행 경로 없음. 소스 수정도 포함",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-97629",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "TLS session ticket 키 교체 사용 시 조건부 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-97205",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "AIO 미컴파일로 해당 조합 실행 경로 없음. 소스 수정 포함",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-90439",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "HTTP/3 미컴파일로 실행 경로 없음. 소스 수정 포함",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42533",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "map/regex 조합에서 조건부 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-60005",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "slice 모듈 미컴파일. 소스 수정 포함",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-56434",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "SSI 사용 시 조건부 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42530",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "HTTP/3 미컴파일. 소스 수정 포함",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42055",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "proxy-v2/gRPC의 입력 조건에 따라 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-48142",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "charset 모듈 사용 조건에 따라 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-9256",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "rewrite 지시문 조합에서 조건부 영향. 코드 수정 반영",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-49975",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "상류가 추가한 max_headers 검사 코드는 원본 포크에도 이미 존재함을 소스로 확인",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42926",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42945",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42946",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-42934",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-40460",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-40701",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-27654",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-27784",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-32647",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-27651",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-28753",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-28755",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "nginx",
+    "id": "CVE-2026-1642",
+    "before": "1.31.0",
+    "after": "1.31.8",
+    "assessment": "공식 영향 범위는 1.31.0 미만. 원본 코어가 이미 수정 판에 포함됨",
+    "source": "https://nginx.org/en/security_advisories.html"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2025-59375",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2025-59375"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-102633",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "vendor": "libexpat",
+        "product": "libexpat",
+        "defaultStatus": "unaffected",
+        "versions": [
+          {
+            "version": "2.7.2",
+            "status": "affected",
+            "versionType": "semver",
+            "lessThanOrEqual": "2.8.5"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-102633"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-24515",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.4",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-24515"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-25210",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.4",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-25210"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-32776",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.5",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-32776"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-32777",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.5",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-32777"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-32778",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.7.5",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-32778"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-41080",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.0",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-41080"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-45186",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.1",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-45186"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-50219",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-50219"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56131",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56131"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56132",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56132"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56403",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56403"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56404",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56404"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56405",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56405"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56406",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56406"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56407",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56407"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56408",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56408"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56409",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56409"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56410",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56410"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56411",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56411"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-56412",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.2",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-56412"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-66046",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "affected",
+        "vendor": "libexpat project",
+        "product": "libexpat",
+        "packageURL": "pkg:github/libexpat/libexpat",
+        "repo": "https://github.com/libexpat/libexpat",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver",
+            "lessThanOrEqual": "2.8.3"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-66046"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-72522",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.3",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-72522"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-76641",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "affected",
+        "vendor": "libexpat",
+        "product": "libexpat",
+        "packageURL": "pkg:github/libexpat/libexpat",
+        "repo": "https://github.com/libexpat/libexpat",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver",
+            "lessThanOrEqual": "2.8.3"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-76641"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-76956",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.4",
+            "status": "affected",
+            "version": "2.8.2",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-76956"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-76957",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "libexpat",
+        "vendor": "libexpat project",
+        "versions": [
+          {
+            "lessThan": "2.8.4",
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-76957"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-77214",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "defaultStatus": "unaffected",
+        "vendor": "libexpat",
+        "product": "libexpat",
+        "packageURL": "pkg:github/libexpat/libexpat",
+        "repo": "https://github.com/libexpat/libexpat",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "0",
+            "versionType": "semver",
+            "lessThanOrEqual": "2.8.5"
+          },
+          {
+            "status": "unaffected",
+            "version": "13c5f63a7f1c52c2feee3b16a1134d4fb68e9ea0",
+            "versionType": "git"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-77214"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2026-93990",
+    "before": "2.6.4",
+    "after": "2.9.0 + PR 1431",
+    "assessment": "공식 CNA 영향 범위를 원문 필드에 보존. 32-bit 전용·콜백 재진입·에러 복구 등 조건별 문제이며 변경 이력의 수정 판 2.9.0까지 반영. 새 버전에서 도입된 문제는 이전 2.6.4에 무조건 영향 있다고 보지 않음",
+    "affected_ranges": [
+      {
+        "vendor": "libexpat",
+        "product": "libexpat",
+        "defaultStatus": "unaffected",
+        "packageURL": "pkg:github/libexpat/libexpat",
+        "repo": "https://github.com/libexpat/libexpat",
+        "versions": [
+          {
+            "version": "0",
+            "status": "affected",
+            "versionType": "semver",
+            "lessThan": "2.8.5"
+          },
+          {
+            "version": "2.8.5",
+            "status": "unaffected",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-93990"
+  },
+  {
+    "component": "Brotli",
+    "id": "CVE-2026-111497",
+    "before": "1.1.0",
+    "after": "1.2.1",
+    "assessment": "취약 디코더가 포함된 소스 판. 이 nginx는 인코더를 사용하나 라이브러리 전체를 수정 판으로 교체",
+    "source": "https://github.com/google/brotli/releases/tag/v1.2.1"
+  },
+  {
+    "component": "Brotli",
+    "id": "CVE-2025-6176",
+    "before": "1.1.0",
+    "after": "1.2.1",
+    "assessment": "Python/Scrapy 래퍼의 출력량 제한 관련 권고. 해당 Python 래퍼는 이미지에 없고 Brotli 소스도 최신으로 교체",
+    "source": "https://github.com/google/brotli/releases"
+  },
+  {
+    "component": "Kong",
+    "id": "CVE-2026-1907",
+    "before": "fork 3.10.0",
+    "after": "upstream 7e727db0a",
+    "assessment": "하이브리드 제어 평면에 노출되는 공유 코드가 존재하므로 영향 있음. 노드 식별자·호스트 이름 검증을 소스에서 가져옴",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-1907"
+  },
+  {
+    "component": "Kong",
+    "id": "CVE-2026-6338",
+    "before": "fork 3.10.0",
+    "after": "upstream af0acd7f4",
+    "assessment": "CNA 대상 제품은 Enterprise. 공유 요청 처리 경로에도 상류 요청 밀수 수정을 보수적으로 반영. 비공개 Enterprise 수정과 1:1 동일하다고 단정하지 않음",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-6338"
+  },
+  {
+    "component": "Kong",
+    "id": "CVE-2026-14916",
+    "before": "OSS",
+    "after": "OSS",
+    "assessment": "Enterprise MCP OAuth2/DataKit JWT 검증 코드가 없어 비해당",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-14916"
+  },
+  {
+    "component": "Kong",
+    "id": "CVE-2026-14917",
+    "before": "OSS",
+    "after": "OSS",
+    "assessment": "SAML Enterprise 플러그인이 없어 비해당",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-14917"
+  },
+  {
+    "component": "Kong Operator",
+    "id": "CVE-2026-16543",
+    "before": "not included",
+    "after": "not included",
+    "assessment": "Operator/KIC는 이 저장소·이미지의 구성요소가 아님",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2026-16543"
+  },
+  {
+    "component": "Kong Insomnia",
+    "id": "CVE-2025-1087",
+    "before": "not included",
+    "after": "not included",
+    "assessment": "Insomnia 데스크톱 앱은 이미지에 없음",
+    "source": "https://www.cve.org/CVERecord?id=CVE-2025-1087"
+  },
+  {
+    "component": "crossbeam-epoch",
+    "id": "RUSTSEC-2026-0204",
+    "before": "0.9.18",
+    "after": "0.9.20",
+    "assessment": "ATC 벤치마크의 개발 의존 경로. 실행 이미지에서 호출하지 않지만 잠금 파일까지 수정",
+    "source": "https://rustsec.org/advisories/RUSTSEC-2026-0204.html"
+  },
+  {
+    "component": "Expat",
+    "id": "PR-1431",
+    "before": "2.9.0",
+    "after": "2.9.0 + maintainer PR",
+    "assessment": "XML_ParserReset의 누적 메모리 계수·설정 초기화 회귀. 10월 19일 공개된 유지보수자 수정과 회귀 테스트 적용",
+    "source": "https://github.com/libexpat/libexpat/pull/1431"
+  },
+  {
+    "component": "Expat",
+    "id": "CVE-2025-66382",
+    "before": "2.6.4",
+    "after": "UNFIXED in 2.9.0",
+    "assessment": "LuaExpat을 통해 XML 처리에 영향 가능. 확정 공개 패치가 없어 미해결로 보존. 입력 크기·노출 범위 제한 필요",
+    "source": "https://github.com/libexpat/libexpat/issues/1076"
+  },
+  {
+    "component": "Expat",
+    "id": "PR-1433",
+    "before": "2.9.0",
+    "after": "not applied",
+    "assessment": "외부 기여자의 미병합 엔터티 처리 개선 제안. 상류 확정 수정이 아니며 2.9.0과 충돌해 포함하지 않음",
+    "source": "https://github.com/libexpat/libexpat/pull/1433"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2026-5222",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2026-5223",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2025-15661",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2026-55199",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2026-55200",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  },
+  {
+    "component": "Rust/Cargo build toolchain",
+    "id": "CVE-2026-33056",
+    "before": "1.82.0",
+    "after": "1.99.1",
+    "assessment": "빌드 도구의 crate 취득·Git/SSH·압축 해제 관련 공개 보안 수정. 실행 이미지에는 Cargo를 넣지 않으며 빌드 도구도 공식 안정판으로 교체",
+    "source": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html"
+  }
+]

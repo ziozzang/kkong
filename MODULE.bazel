@@ -4,3 +4,6 @@
 #
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
+
+# Current Rust toolchains refer to UEFI and other platform constraints.
+bazel_dep(name = "platforms", version = "1.0.0")

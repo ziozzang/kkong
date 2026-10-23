@@ -1,0 +1,8 @@
+.git
+.work
+bazel-*
+*.tgz
+*.sha256
+*.patch
+scan-*.json
+security/20261023/evidence

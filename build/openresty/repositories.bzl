@@ -44,7 +44,7 @@ def openresty_repositories():
         openresty_http_archive_wrapper,
         name = "openresty",
         build_file = "//build/openresty:BUILD.openresty.bazel",
-        archive = "//vendor/openresty:openresty-1.29.2.3-nginx-1.31.0-as1292.tar.gz",
+        archive = "//vendor/openresty:openresty-1.29.2.3-nginx-1.31.8-sec20261023.tar.gz",
         strip_prefix = "openresty-" + openresty_version,
         patches = KONG_VAR["OPENRESTY_PATCHES"],
         patch_args = ["-p1"],
@@ -110,12 +110,17 @@ def openresty_http_archive_wrapper(name, **kwargs):
         build_file = kwargs["build_file"],
         archive = kwargs["archive"],
         strip_prefix = kwargs["strip_prefix"],
+        sha256 = KONG_VAR["OPENRESTY_SHA256"],
         patches = kwargs["patches"],
         patch_args = kwargs["patch_args"],
     )
     openresty_binding(name = name + "_binding")
 
 def _openresty_vendor_archive_impl(ctx):
+    command = ["shasum", "-a", "256"] if ctx.os.name == "mac os x" else ["sha256sum"]
+    result = ctx.execute(command + [str(ctx.path(ctx.attr.archive))])
+    if result.return_code != 0 or result.stdout.split(" ")[0] != ctx.attr.sha256:
+        fail("Vendored OpenResty archive SHA-256 does not match .requirements")
     ctx.extract(
         ctx.path(ctx.attr.archive),
         stripPrefix = ctx.attr.strip_prefix,
@@ -133,6 +138,7 @@ def _openresty_vendor_archive_impl(ctx):
 _openresty_vendor_archive = repository_rule(
     implementation = _openresty_vendor_archive_impl,
     attrs = {
+        "sha256": attr.string(mandatory = True),
         "archive": attr.label(allow_single_file = True, mandatory = True),
         "build_file": attr.label(allow_single_file = True, mandatory = True),
         "patch_args": attr.string_list(default = []),

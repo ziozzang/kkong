@@ -1,8 +1,7 @@
 diff --git a/bundle/nginx-1.29.2/auto/endianness b/bundle/nginx-1.29.2/auto/endianness
-index 1b552b6..be84487 100644
 --- a/bundle/nginx-1.29.2/auto/endianness
 +++ b/bundle/nginx-1.29.2/auto/endianness
-@@ -13,7 +13,13 @@ checking for system byte ordering
+@@ -13,7 +13,13 @@
  END
  
  
@@ -17,7 +16,7 @@ index 1b552b6..be84487 100644
  
  int main(void) {
      int i = 0x11223344;
-@@ -26,25 +32,26 @@ int main(void) {
+@@ -26,25 +32,26 @@
  
  END
  
@@ -33,9 +32,6 @@ index 1b552b6..be84487 100644
 -    if $NGX_AUTOTEST >/dev/null 2>&1; then
 -        echo " little endian"
 -        have=NGX_HAVE_LITTLE_ENDIAN . auto/have
--    else
--        echo " big endian"
--    fi
 +    if [ -x $NGX_AUTOTEST ]; then
 +        if $NGX_AUTOTEST >/dev/null 2>&1; then
 +            echo " little endian"
@@ -43,20 +39,24 @@ index 1b552b6..be84487 100644
 +        else
 +            echo " big endian"
 +        fi
- 
--    rm -rf $NGX_AUTOTEST*
++
 +        rm -rf $NGX_AUTOTEST*
- 
--else
--    rm -rf $NGX_AUTOTEST*
-+    else
++
+     else
+-        echo " big endian"
 +        rm -rf $NGX_AUTOTEST*
- 
--    echo
--    echo "$0: error: cannot detect system byte ordering"
--    exit 1
++
 +        echo
 +        echo "$0: error: cannot detect system byte ordering"
 +        exit 1
-+    fi
+     fi
+-
+-    rm -rf $NGX_AUTOTEST*
+-
+-else
+-    rm -rf $NGX_AUTOTEST*
+-
+-    echo
+-    echo "$0: error: cannot detect system byte ordering"
+-    exit 1
  fi

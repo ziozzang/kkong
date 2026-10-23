@@ -1,8 +1,7 @@
 diff --git a/configure b/configure
-index cb7e518..66c17aa 100755
 --- a/configure
 +++ b/configure
-@@ -128,7 +128,7 @@ my $ngx_sbin;
+@@ -128,7 +128,7 @@
  my %resty_opts;
  my $dry_run;
  my @ngx_rpaths;
@@ -11,17 +10,17 @@ index cb7e518..66c17aa 100755
  my $cores;
  my $luajit_xcflags = '';
  my $user_luajit_xcflags;
-@@ -356,6 +356,9 @@ for my $opt (@ARGV) {
+@@ -355,6 +355,9 @@
+         my ($lib, $opt) = ($1, $2);
          push @ngx_opts, "--with-$lib-opt=-g $opt";
          $with_ext_lib_opts{$lib} = 1;
- 
++
 +    } elsif ($opt =~ /^--with-install-prefix=(.*)/) {
 +        $resty_opts{install_prefix} = $1;
-+
+ 
      } elsif ($opt =~ /^--sbin-path=(.*)/) {
          $ngx_sbin = $1;
-         push @ngx_opts, $opt;
-@@ -696,7 +699,12 @@ _END_
+@@ -696,7 +699,12 @@
          #unshift @ngx_ld_opts, "-L$lib";
          #unshift @ngx_cc_opts, "-I$inc";
  
@@ -35,7 +34,7 @@ index cb7e518..66c17aa 100755
  
      } elsif ($opts->{luajit}) {
          my $luajit_src = auto_complete 'LuaJIT';
-@@ -862,7 +870,12 @@ _END_
+@@ -862,7 +870,12 @@
          #unshift @ngx_cc_opts, "-I$inc";
  
          if ($platform ne 'msys') {
@@ -49,7 +48,7 @@ index cb7e518..66c17aa 100755
          }
  
          cd '..';
-@@ -871,8 +884,13 @@ _END_
+@@ -871,8 +884,13 @@
      if ($opts->{luajit} || $opts->{luajit_path}) {
          # build lua modules
  
@@ -65,19 +64,19 @@ index cb7e518..66c17aa 100755
  
          {
              my $ngx_lua_dir = auto_complete 'ngx_lua';
-@@ -926,6 +944,11 @@ _EOC_
+@@ -925,6 +943,11 @@
+ 
              close $in;
          }
- 
++
 +        # set it back
 +        $lualib_prefix = File::Spec->catfile($prefix, "lualib");
 +        $site_lualib_prefix = File::Spec->catfile($prefix, "site/lualib");
 +
-+
+ 
          unless ($opts->{no_lua_cjson}) {
              my $dir = auto_complete 'lua-cjson';
-             if (!defined $dir) {
-@@ -1175,10 +1198,16 @@ _EOC_
+@@ -1175,10 +1198,16 @@
              open my $in, $resty_bin
                  or die "Cannot open $resty_bin for reading: $!\n";
              my ($new, $found);
@@ -95,13 +94,13 @@ index cb7e518..66c17aa 100755
  
                  } else {
                      $new .= $_;
-@@ -1356,6 +1385,9 @@ _EOC_
+@@ -1355,6 +1384,9 @@
+   --with-libdrizzle=DIR              specify the libdrizzle 1.0 (or drizzle) installation prefix
    --with-libpq=DIR                   specify the libpq (or postgresql) installation prefix
    --with-pg_config=PATH              specify the path of the pg_config utility
- 
++
 +  --with-install-prefix=DIR          specify the install prefix on target that differs from
 +                                     --prefix that injects hardcoded paths in compiled binary
-+
+ 
  Options directly inherited from nginx
  
-   --sbin-path=PATH                   set nginx binary pathname
