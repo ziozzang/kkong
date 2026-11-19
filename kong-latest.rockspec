@@ -4,7 +4,7 @@ rockspec_format = "3.0"
 supported_platforms = {"linux", "macosx"}
 source = {
   url = "git+https://github.com/Kong/kong.git",
-  tag = "3.10.0"
+  tag = "3.10.1"
 }
 description = {
   summary = "Kong is a scalable and customizable API Management Layer built on top of Nginx.",
@@ -16,7 +16,7 @@ dependencies = {
   "luasec == 1.3.2",
   "luasocket == 3.0-rc1",
   "penlight == 1.14.0",
-  "lua-resty-http == 0.17.2",
+  "lua-resty-http == 0.18.0",
   "lua-resty-jit-uuid == 0.0.7",
   "lua-ffi-zlib == 0.6",
   "multipart == 0.5.9",
@@ -30,16 +30,16 @@ dependencies = {
   "lua_pack == 2.0.0",
   "binaryheap >= 0.4",
   "luaxxhash >= 1.0",
-  "lua-protobuf == 0.5.2",
-  "lua-resty-healthcheck == 3.1.0",
+  "lua-protobuf == 0.5.3",
+  "lua-resty-healthcheck == 3.1.2",
   "lua-messagepack == 0.5.4",
-  "lua-resty-aws == 1.5.4",
-  "lua-resty-openssl == 1.5.1",
+  "lua-resty-aws == 1.7.2",
+  "lua-resty-openssl == 1.9.0",
   "lua-resty-gcp == 0.0.13",
   "lua-resty-counter == 0.2.1",
   "lua-resty-ipmatcher == 0.6.1",
   "lua-resty-acme == 0.15.0",
-  "lua-resty-session == 4.0.5",
+  "lua-resty-session == 4.2.0",
   "lua-resty-timer-ng == 0.2.7",
   "lpeg == 1.1.0",
   "lua-resty-ljsonschema == 1.2.0",
@@ -208,6 +208,7 @@ build = {
     ["kong.tools.time"] = "kong/tools/time.lua",
     ["kong.tools.module"] = "kong/tools/module.lua",
     ["kong.tools.ip"] = "kong/tools/ip.lua",
+    ["kong.tools.hostname"] = "kong/tools/hostname.lua",
     ["kong.tools.http"] = "kong/tools/http.lua",
     ["kong.tools.cjson"] = "kong/tools/cjson.lua",
     ["kong.tools.emmy_debugger"] = "kong/tools/emmy_debugger.lua",

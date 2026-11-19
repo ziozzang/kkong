@@ -1,8 +1,7 @@
 diff --git a/bundle/nginx-1.29.2/auto/feature b/bundle/nginx-1.29.2/auto/feature
-index 3561f59..d6a2889 100644
 --- a/bundle/nginx-1.29.2/auto/feature
 +++ b/bundle/nginx-1.29.2/auto/feature
-@@ -49,12 +49,20 @@ eval "/bin/sh -c \"$ngx_test\" >> $NGX_AUTOCONF_ERR 2>&1"
+@@ -49,12 +49,20 @@
  
  if [ -x $NGX_AUTOTEST ]; then
  
@@ -25,7 +24,7 @@ index 3561f59..d6a2889 100644
                  ngx_found=yes
  
                  if test -n "$ngx_feature_name"; then
-@@ -68,17 +76,27 @@ if [ -x $NGX_AUTOTEST ]; then
+@@ -68,17 +76,27 @@
  
          value)
              # /bin/sh is used to intercept "Killed" or "Abort trap" messages
@@ -57,7 +56,7 @@ index 3561f59..d6a2889 100644
              else
                  echo " found but is not working"
              fi
-@@ -86,7 +104,7 @@ END
+@@ -86,7 +104,7 @@
  
          bug)
              # /bin/sh is used to intercept "Killed" or "Abort trap" messages
@@ -67,10 +66,9 @@ index 3561f59..d6a2889 100644
  
              else
 diff --git a/bundle/nginx-1.29.2/auto/options b/bundle/nginx-1.29.2/auto/options
-index d22f48b..0fa47c5 100644
 --- a/bundle/nginx-1.29.2/auto/options
 +++ b/bundle/nginx-1.29.2/auto/options
-@@ -413,6 +413,18 @@ $0: warning: the \"--with-sha1-asm\" option is deprecated"
+@@ -432,6 +432,18 @@
          --test-build-epoll)              NGX_TEST_BUILD_EPOLL=YES   ;;
          --test-build-solaris-sendfilev)  NGX_TEST_BUILD_SOLARIS_SENDFILEV=YES ;;
  
@@ -89,7 +87,7 @@ index d22f48b..0fa47c5 100644
          *)
              echo "$0: error: invalid option \"$option\""
              exit 1
-@@ -608,6 +620,17 @@ cat << END
+@@ -636,6 +648,17 @@
  
    --with-debug                       enable debug logging
  
@@ -107,7 +105,7 @@ index d22f48b..0fa47c5 100644
  END
  
      exit 1
-@@ -616,6 +639,8 @@ fi
+@@ -644,6 +667,8 @@
  
  if [ ".$NGX_PLATFORM" = ".win32" ]; then
      NGX_WINE=$WINE
@@ -117,10 +115,9 @@ index d22f48b..0fa47c5 100644
  
  
 diff --git a/bundle/nginx-1.29.2/auto/types/sizeof b/bundle/nginx-1.29.2/auto/types/sizeof
-index 480d8cf..23c5171 100644
 --- a/bundle/nginx-1.29.2/auto/types/sizeof
 +++ b/bundle/nginx-1.29.2/auto/types/sizeof
-@@ -12,9 +12,12 @@ checking for $ngx_type size
+@@ -12,9 +12,12 @@
  
  END
  
@@ -135,7 +132,7 @@ index 480d8cf..23c5171 100644
  
  #include <sys/types.h>
  #include <sys/time.h>
-@@ -33,15 +36,16 @@ int main(void) {
+@@ -33,15 +36,16 @@
  END
  
  
@@ -159,28 +156,30 @@ index 480d8cf..23c5171 100644
  
  
 diff --git a/bundle/nginx-1.29.2/auto/unix b/bundle/nginx-1.29.2/auto/unix
-index 6b44fc9..7410746 100644
 --- a/bundle/nginx-1.29.2/auto/unix
 +++ b/bundle/nginx-1.29.2/auto/unix
-@@ -640,13 +640,13 @@ ngx_feature_libs=
+@@ -622,13 +622,13 @@
  
  # C types
  
 -ngx_type="int"; . auto/types/sizeof
-+ngx_type="int"; ngx_param="INT"; . auto/types/sizeof
- 
+-
 -ngx_type="long"; . auto/types/sizeof
-+ngx_type="long"; ngx_param="LONG"; . auto/types/sizeof
- 
+-
 -ngx_type="long long"; . auto/types/sizeof
-+ngx_type="long long"; ngx_param="LONG_LONG"; . auto/types/sizeof
- 
+-
 -ngx_type="void *"; . auto/types/sizeof; ngx_ptr_size=$ngx_size
++ngx_type="int"; ngx_param="INT"; . auto/types/sizeof
++
++ngx_type="long"; ngx_param="LONG"; . auto/types/sizeof
++
++ngx_type="long long"; ngx_param="LONG_LONG"; . auto/types/sizeof
++
 +ngx_type="void *"; ngx_param="PTR_SIZE"; . auto/types/sizeof; ngx_ptr_size=$ngx_size
  ngx_param=NGX_PTR_SIZE; ngx_value=$ngx_size; . auto/types/value
  
  
-@@ -657,7 +657,7 @@ NGX_INCLUDE_AUTO_CONFIG_H="#include \"ngx_auto_config.h\""
+@@ -639,7 +639,7 @@
  ngx_type="uint32_t"; ngx_types="u_int32_t"; . auto/types/typedef
  ngx_type="uint64_t"; ngx_types="u_int64_t"; . auto/types/typedef
  
@@ -189,7 +188,7 @@ index 6b44fc9..7410746 100644
  . auto/types/sizeof
  ngx_param=NGX_SIG_ATOMIC_T_SIZE; ngx_value=$ngx_size; . auto/types/value
  
-@@ -673,15 +673,15 @@ ngx_type="rlim_t"; ngx_types="int"; . auto/types/typedef
+@@ -655,15 +655,15 @@
  
  . auto/endianness
  

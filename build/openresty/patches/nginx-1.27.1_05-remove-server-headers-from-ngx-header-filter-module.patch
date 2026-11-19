@@ -30,10 +30,11 @@ diff --git a/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c b/bund
      if (r->headers_out.date == NULL) {
          len += sizeof("Date: Mon, 28 Sep 1970 06:00:00 GMT" CRLF) - 1;
      }
-@@ -456,23 +441,6 @@
+@@ -455,23 +440,6 @@
+         b->last = ngx_sprintf(b->last, "%03ui ", status);
      }
      *b->last++ = CR; *b->last++ = LF;
- 
+-
 -    if (r->headers_out.server == NULL) {
 -        if (clcf->server_tokens == NGX_HTTP_SERVER_TOKENS_ON) {
 -            p = ngx_http_server_full_string;
@@ -50,7 +51,6 @@ diff --git a/bundle/nginx-1.29.2/src/http/ngx_http_header_filter_module.c b/bund
 -
 -        b->last = ngx_cpymem(b->last, p, len);
 -    }
--
+ 
      if (r->headers_out.date == NULL) {
          b->last = ngx_cpymem(b->last, "Date: ", sizeof("Date: ") - 1);
-         b->last = ngx_cpymem(b->last, ngx_cached_http_time.data,

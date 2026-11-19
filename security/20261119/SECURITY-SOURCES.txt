@@ -1,0 +1,6 @@
+2026-11-19 security refresh (kkong 3.10.1)
+nginx 1.31.9 (vanilla 1.31.8..1.31.9 delta applied on the 2026-10-23 fork archive; OpenResty ABI directory kept)
+nginx-1.31.9.tar.gz sha256 a11c5eeee2e257f4478f0e649f84b0040787d277d2d3e5233952aa6b6dcb80ad (PGP: Sergey Kandaurov)
+OpenResty module refresh from official openresty-1.31.8.1.tar.gz sha256 b569c63b420f80a4ac8466f2deffe73ed93ab760026532e039c3658409a997f4 (PGP: Yichun Zhang)
+LuaJIT 2.1-20261023; ngx_lua 0.10.32rc7; ngx_stream_lua 0.0.20rc3; lua-resty-core 0.1.35rc2; lua-cjson 2.1.0.20; lua-resty-mysql 0.31; resty-cli 0.36
+Build directory labels are retained for compatibility and are not source version identifiers.

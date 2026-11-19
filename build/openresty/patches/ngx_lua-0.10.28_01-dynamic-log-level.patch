@@ -1,8 +1,7 @@
-diff --git a/bundle/ngx_lua-0.10.30rc2/src/ngx_http_lua_log.c b/bundle/ngx_lua-0.10.30rc2/src/ngx_http_lua_log.c
-index 43ab820..d18fd05 100644
---- a/bundle/ngx_lua-0.10.30rc2/src/ngx_http_lua_log.c
-+++ b/bundle/ngx_lua-0.10.30rc2/src/ngx_http_lua_log.c
-@@ -101,7 +101,11 @@ log_wrapper(ngx_log_t *log, const char *ident, ngx_uint_t level,
+diff --git a/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c b/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
+--- a/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
++++ b/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
+@@ -101,7 +101,11 @@
      const char          *msg;
      lua_Debug            ar;
  
@@ -14,7 +13,7 @@ index 43ab820..d18fd05 100644
          return 0;
      }
  
-@@ -427,7 +431,12 @@ ngx_http_lua_ffi_errlog_get_sys_filter_level(ngx_http_request_t *r)
+@@ -427,7 +431,12 @@
          log = ngx_cycle->log;
      }
  

@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-23T02:39:50.185476+00:00",
+  "image": "kkong:3.10.0-sec20261023",
+  "image_id": "sha256:2c0827d6d5e2981c69a234a8b199509bc00ef9477e8aefe189d15f8c240fad74",
+  "image_size_bytes": 404267571,
+  "archive": "kkong-3.10.0-sec20261023.tgz",
+  "archive_size_bytes": 142742501,
+  "archive_sha256": "07ddb56d98ed88fdfe3e16d69e06632d6a6e0635a005e5a47baa4d1c8440373e",
+  "high_critical_before": 46,
+  "high_critical_after": 0,
+  "tests": {
+    "dbless_admin_route_get_post_404_health": "passed",
+    "hostname_upstream_cases": 63,
+    "tls_yield_connections": 21,
+    "expat_checks": 5220,
+    "expat_failed": 0,
+    "runtime_source_repack_sha256": "5b28607adcb70b55e7be074dcf0d4a7f7eb2891c9cae212c15f771cffdd198f8"
+  },
+  "remaining_public_issue": "Expat CVE-2025-66382: no published fix; see README",
+  "omitted_optional_features": [
+    "WebAssembly",
+    "Kong Manager UI"
+  ]
+}

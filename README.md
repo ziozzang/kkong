@@ -2,6 +2,10 @@
 
 ![Stars](https://img.shields.io/github/stars/Kong/kong?style=flat-square) ![GitHub commit activity](https://img.shields.io/docker/pulls/_/kong?style=flat-square) [![Build Status][badge-action-image]][badge-action-url] ![Version](https://img.shields.io/github/v/release/Kong/kong?color=green&label=Version&style=flat-square)  ![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square) [![Twitter Follow](https://img.shields.io/twitter/follow/thekonginc?style=social)](https://x.com/thekonginc)
 
+## 2026-10-23 보안 컨테이너
+
+nginx 1.31.8, OpenSSL 3.5.9, PCRE2 10.49, Expat 2.9.0 및 Brotli 1.2.1로 갱신한 소스 빌드와 한국어 변경 표·검사·실행 방법은 [보안 빌드 안내](security/20261023/README.md)에 있다. 공개 패치가 없는 Expat 서비스 거부 문제도 이 문서에 명시했다.
+
 ## Security Fork Notice
 
 This repository is a security-focused fork of Kong used to carry custom

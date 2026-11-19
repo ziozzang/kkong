@@ -45,3 +45,13 @@ bazel-*
 # remove it after migrating from WORKSPACE to Bzlmod
 MODULE.bazel.lock
 spec/fixtures/external_plugins/go/go-hello
+
+.work/
+*.tgz
+*.sha256
+scan-before.json
+scan-after.json
+security/20261023/evidence/
+runtime/
+/kkong-*-sec20261023.patch
+__pycache__/

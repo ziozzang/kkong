@@ -1,0 +1,5 @@
+2026-10-23 security refresh
+nginx 1.31.8 (vanilla 1.31.0..1.31.8 delta applied on fork; OpenResty ABI directory kept)
+OpenResty module refresh from official openresty-1.31.1.1.tar.gz sha256 65b78baadd3f0984055de89bf13f4a1932e5bfe9c31932037a134ea2b1a0ce42
+LuaJIT 2.1-20260415; ngx_lua 0.10.31rc5; ngx_stream_lua 0.0.19rc4; lua-resty-core 0.1.34rc3; lua-cjson 2.1.0.17; lua-resty-mysql 0.30
+Build directory labels are retained for compatibility and are not source version identifiers.

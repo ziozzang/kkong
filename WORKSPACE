@@ -48,10 +48,18 @@ rules_foreign_cc_dependencies(
     register_preinstalled_tools = True,  # use preinstalled toolchains like make
 )
 
+# Required before loading current Rust rules, which use the CcInfo compatibility wrapper.
+http_archive(
+    name = "rules_cc",
+    sha256 = "906e89286acc67c20819c3c88b3283de0d5868afda33635d70acae0de9777bb7",
+    strip_prefix = "rules_cc-0.0.14",
+    urls = ["https://github.com/bazelbuild/rules_cc/releases/download/0.0.14/rules_cc-0.0.14.tar.gz"],
+)
+
 http_archive(
     name = "rules_rust",
-    integrity = "sha256-JLN47ZcAbx9wEr5Jiib4HduZATGLiDgK7oUi/fvotzU=",
-    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.42.1/rules_rust-v0.42.1.tar.gz"],
+    sha256 = "dc287e3eca80b29d5cc95e261cae273eedf1af4a00a96ae937e234534dadb24c",
+    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.67.0/rules_rust-0.67.0.tar.gz"],
 )
 
 load("//build:kong_bindings.bzl", "load_bindings")

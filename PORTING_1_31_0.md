@@ -1,5 +1,7 @@
 # Kong 1.31.0 Porting Notes
 
+> 2026-10-23 갱신 내역: [보안 컨테이너 빌드](security/20261023/README.md). 아래는 최초 포팅의 기록이다.
+
 This tree is a security-focused Kong source fork used to validate Kong on a
 custom OpenResty runtime whose embedded nginx core was moved to the `1.31.x`
 line. Its purpose is to carry security-related runtime porting work and verify
