@@ -1,6 +1,6 @@
-diff --git a/bundle/LuaJIT-2.1-20260415/src/luajit_rolling.h b/bundle/LuaJIT-2.1-20260415/src/luajit_rolling.h
---- a/bundle/LuaJIT-2.1-20260415/src/luajit_rolling.h
-+++ b/bundle/LuaJIT-2.1-20260415/src/luajit_rolling.h
+diff --git a/bundle/LuaJIT-2.1-20261023/src/luajit_rolling.h b/bundle/LuaJIT-2.1-20261023/src/luajit_rolling.h
+--- a/bundle/LuaJIT-2.1-20261023/src/luajit_rolling.h
++++ b/bundle/LuaJIT-2.1-20261023/src/luajit_rolling.h
 @@ -32,7 +32,9 @@
  
  #define OPENRESTY_LUAJIT

@@ -1,6 +1,6 @@
-diff --git a/bundle/lua-cjson-2.1.0.17/lua_cjson.c b/bundle/lua-cjson-2.1.0.17/lua_cjson.c
---- a/bundle/lua-cjson-2.1.0.17/lua_cjson.c
-+++ b/bundle/lua-cjson-2.1.0.17/lua_cjson.c
+diff --git a/bundle/lua-cjson-2.1.0.20/lua_cjson.c b/bundle/lua-cjson-2.1.0.20/lua_cjson.c
+--- a/bundle/lua-cjson-2.1.0.20/lua_cjson.c
++++ b/bundle/lua-cjson-2.1.0.20/lua_cjson.c
 @@ -1604,6 +1604,10 @@
      if (token.type != T_END)
          json_throw_parse_error(l, &json, "the end", &token);

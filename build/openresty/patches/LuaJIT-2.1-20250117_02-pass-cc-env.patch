@@ -1,6 +1,6 @@
-diff --git a/bundle/LuaJIT-2.1-20260415/src/Makefile b/bundle/LuaJIT-2.1-20260415/src/Makefile
---- a/bundle/LuaJIT-2.1-20260415/src/Makefile
-+++ b/bundle/LuaJIT-2.1-20260415/src/Makefile
+diff --git a/bundle/LuaJIT-2.1-20261023/src/Makefile b/bundle/LuaJIT-2.1-20261023/src/Makefile
+--- a/bundle/LuaJIT-2.1-20261023/src/Makefile
++++ b/bundle/LuaJIT-2.1-20261023/src/Makefile
 @@ -26,7 +26,8 @@
  DEFAULT_CC = gcc
  #

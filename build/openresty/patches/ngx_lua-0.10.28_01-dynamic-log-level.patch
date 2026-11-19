@@ -1,6 +1,6 @@
-diff --git a/bundle/ngx_lua-0.10.31rc5/src/ngx_http_lua_log.c b/bundle/ngx_lua-0.10.31rc5/src/ngx_http_lua_log.c
---- a/bundle/ngx_lua-0.10.31rc5/src/ngx_http_lua_log.c
-+++ b/bundle/ngx_lua-0.10.31rc5/src/ngx_http_lua_log.c
+diff --git a/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c b/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
+--- a/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
++++ b/bundle/ngx_lua-0.10.32rc7/src/ngx_http_lua_log.c
 @@ -101,7 +101,11 @@
      const char          *msg;
      lua_Debug            ar;

@@ -17,7 +17,4 @@ def libexpat_repositories():
         sha256 = KONG_VAR["LIBEXPAT_SHA256"],
         strip_prefix = "expat-" + version,
         build_file = "//build/libexpat:BUILD.libexpat.bazel",
-        # Maintainer fix published 2026-10-19; upstream PR includes reset regressions.
-        patches = ["//build:libexpat/patches/PR-1431.patch"],
-        patch_args = ["-p2"],
     )
