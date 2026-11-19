@@ -336,7 +336,7 @@ jobs:
 
     - name: Login to Docker Hub
       if: ${{ env.HAS_ACCESS_TO_GITHUB_TOKEN == 'true' }}
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v2.1.0
+      uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v2.1.0
       with:
         username: ${{ env.DOCKER_ORGANIZATION }}
         password: ${{ secrets.DOCKER_OAT_PUSH }}
@@ -465,7 +465,7 @@ jobs:
 
     - name: Login to Docker Hub
       if: ${{ env.HAS_ACCESS_TO_GITHUB_TOKEN }}
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v2.1.0
+      uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v2.1.0
       with:
         username: ${{ env.DOCKER_ORGANIZATION }}
         password: ${{ secrets.DOCKER_OAT_PUSH }}
@@ -591,7 +591,7 @@ jobs:
     steps:
     - name: Login to Docker Hub
       if: ${{ env.HAS_ACCESS_TO_GITHUB_TOKEN == 'true' }}
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v2.1.0
+      uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v2.1.0
       with:
         username: ${{ env.DOCKER_ORGANIZATION }}
         password: ${{ secrets.DOCKER_OAT_PUSH }}
