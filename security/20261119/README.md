@@ -2,6 +2,17 @@
 
 11월에 공개된 nginx·XML 파서 보안 수정을 반영해 다시 빌드했습니다. 실행 이미지는 Google distroless(Debian 13)로 바꿔 크기를 절반 가까이 줄였습니다. 버전은 3.10.0에서 **3.10.1**로 올렸고, 이미지 이름은 `kkong:3.10.1-sec20261119`입니다.
 
+## 보정판 b (2026-11-23): `kkong:3.10.1-sec20261119b`
+
+**root로 실행하면 `getpwnam("nobody") failed`로 기동하지 못하던 문제를 고쳤습니다.** 컨테이너를 root로 띄우는 경우가 대상입니다(`--user 0`, 일부 쿠버네티스·compose 설정). 첫 판(`sec20261119`)은 이 경우 실행되지 않으므로 b판을 쓰세요.
+
+- 원인: 계정 파일(`/etc/passwd`, `/etc/group`)을 새로 쓰면서 distroless 원본의 `nobody` 항목을 빠뜨렸습니다. root로 시작한 nginx는 작업 프로세스를 기본 사용자 `nobody`/그룹 `nogroup`으로 내리려 합니다. 그런데 `kong` 명령도 내부에서 nginx를 띄우므로 처음부터 실패했습니다.
+- 수정: distroless 원본 계정 파일을 그대로 두고 `kong`(10001)과 `nogroup`(65534)만 덧붙였습니다. 이제 root로 띄우면 주 프로세스는 root이고, 요청을 처리하는 작업 프로세스는 `kong`(10001)으로 돕니다. 기본 실행(UID 10001)도 그대로 됩니다.
+- 함께 바꾼 것: distroless 기반을 최신 digest(`532c7a94…`)로 올렸습니다. 기반에 들어 있던 Debian OpenSSL(libssl3)은 지웠습니다. Kong·nginx·luasec는 모두 자체 빌드한 OpenSSL 3.5.9(`/usr/local/kong/lib`)를 쓰므로 이 라이브러리는 아무도 쓰지 않았습니다. 이 라이브러리에는 11-19 이후 공개된 수정 없는 HIGH(CVE-2026-124709, QUIC 서비스 거부)가 있었습니다.
+- 결과: 위 시험을 모두 다시 통과했고, root 실행 시험을 추가했습니다. Trivy는 CRITICAL 0, HIGH 1(아래 perl-base 항목, 해당 없음)입니다.
+- 참고: 65534 같은 임의 UID로 실행할 때는 `/usr/local/kong`에 쓸 수 없어 실패합니다. Ubuntu판·공식 Kong 이미지도 같은 동작이며, 이때는 `KONG_PREFIX`를 쓰기 가능한 볼륨으로 지정하세요.
+- 이미지 ID `sha256:47fb95fbc47cec52e1df2f222b7d1ef6b5277b79075b5559aa22dac67b16f7a8`, 보관 파일 `kkong-3.10.1-sec20261119b.tgz` SHA-256 `eeb9bf368f31f8d072518c9e0eee6dcb1b1073e99769a2f36ccd360969c3521a`. 시험 로그는 `evidence/b/`.
+
 ## 무엇이 바뀌었나
 
 | 구성요소 | 이전(10-23) → 이번 | 이유 |

@@ -17,10 +17,18 @@ RUN set -eu; mkdir -p /out/usr/bin /out/bin /out/usr/lib/x86_64-linux-gnu /out/v
     cp -a /usr/bin/tr /usr/bin/env /out/usr/bin/; \
     mkdir -p /out/empty-kong-prefix /out/etc; for p in perl-base libyaml-0-2 libcrypt1 dash coreutils; do \
       dpkg-query -s "$p" > "/out/var/lib/dpkg/status.d/$p"; done; \
-    printf 'root:x:0:0:root:/root:/sbin/nologin\nnonroot:x:65532:65532:nonroot:/home/nonroot:/sbin/nologin\nkong:x:10001:10001:kong:/usr/local/kong:/sbin/nologin\n' > /out/passwd; \
-    printf 'root:x:0:\nnonroot:x:65532:\nkong:x:10001:\n' > /out/group
+    : passwd/group are built below from the distroless originals.
+# Keep the distroless account files (root, nobody, nonroot, ...) and only append:
+#   kong (10001) for the default unprivileged run, nogroup (65534) because this nginx
+#   was configured with the Debian default group "nogroup" and needs it when started as root.
+COPY --from=gcr.io/distroless/cc-debian13:nonroot@sha256:532c7a94f9e96ba9db75eb9388f4227751131c7cb0a411d1a8521af4096135de /etc/passwd /etc/group /dist/
+RUN set -eu; cp /dist/passwd /out/passwd; cp /dist/group /out/group; \
+    grep -q '^nobody:' /out/passwd; \
+    echo 'kong:x:10001:10001:kong:/usr/local/kong:/sbin/nologin' >> /out/passwd; \
+    grep -q '^nogroup:' /out/group || echo 'nogroup:x:65534:' >> /out/group; \
+    echo 'kong:x:10001:' >> /out/group
 
-FROM gcr.io/distroless/cc-debian13:nonroot@sha256:cb87acc574abe719b6e5c547384defa2f7b1f24af9605d3f618cf852495d8be2
+FROM gcr.io/distroless/cc-debian13:nonroot@sha256:532c7a94f9e96ba9db75eb9388f4227751131c7cb0a411d1a8521af4096135de
 COPY --from=deps /out/usr /usr
 COPY --from=deps /out/bin /bin
 COPY --from=deps /out/var/lib/dpkg/status.d /var/lib/dpkg/status.d
@@ -36,6 +44,11 @@ USER 0:0
 COPY --from=deps /bin/chown /tmp/chown
 RUN ["/tmp/chown", "10001:10001", "/usr/local/kong"]
 RUN ["/bin/rm", "/tmp/chown"]
+# The base image's Debian OpenSSL is not used: Kong, nginx and luasec load the bundled
+# OpenSSL 3.5.9 from /usr/local/kong/lib (RUNPATH). Remove it with its package record.
+RUN ["/bin/rm", "-rf", "/usr/lib/x86_64-linux-gnu/libssl.so.3", "/usr/lib/x86_64-linux-gnu/libcrypto.so.3", \
+     "/usr/share/doc/libssl3t64", "/usr/share/lintian/overrides/libssl3t64", \
+     "/var/lib/dpkg/status.d/libssl3t64", "/var/lib/dpkg/status.d/libssl3t64.md5sums"]
 USER 10001:10001
 ENV PATH=/usr/local/openresty/luajit/bin:/usr/local/openresty/nginx/sbin:/usr/local/openresty/bin:/usr/local/bin:/usr/bin:/bin \
     KONG_DATABASE=off KONG_ADMIN_LISTEN=127.0.0.1:8001 KONG_NGINX_WORKER_PROCESSES=2 \
